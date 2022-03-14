@@ -29,6 +29,12 @@ export const carritoReducer = (state={carrito:[]}, action) =>{
                     }
                 ]
             }
+        case typesCarrito.eliminarCarrito:
+            const carritoActualizado = state.carrito.filter((prod)=>(prod.id!==action.payload));
+            return{
+                ...state,
+                carrito: carritoActualizado
+            }
         default:
             return state
     }

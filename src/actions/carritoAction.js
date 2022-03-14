@@ -17,3 +17,10 @@ export const cambiarCantidad = (id, cant)=>{
         }
     }
 }
+
+export const eliminarCarrito = (id) =>{
+    return{
+        type: typesCarrito.eliminarCarrito,
+        payload: id
+    }
+}

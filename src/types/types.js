@@ -11,5 +11,6 @@ export const typesProducto = {
 
 export const typesCarrito = {
     agregarCarrito: 'agregarCarrito',
-    cambiarCantidad: 'cambiarCantidad'
+    cambiarCantidad: 'cambiarCantidad',
+    eliminarCarrito: 'eliminarCarrito'
 }

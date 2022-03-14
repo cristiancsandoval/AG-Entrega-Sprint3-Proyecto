@@ -726,6 +726,22 @@ footer > div:last-child > a:hover {
   background-color: #F0AD64;
 }
 
+.btn-eliminarCart {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border: none;
+  background-color: #F3D184;
+  border-radius: 8px;
+}
+.btn-eliminarCart:hover {
+  background-color: #AF2913;
+}
+.btn-eliminarCart img {
+  width: 100%;
+  padding: 5px;
+}
+
 .cntr-registro {
   display: flex;
   flex-direction: column;

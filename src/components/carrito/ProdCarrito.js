@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { cambiarCantidad } from '../../actions/carritoAction';
+import { cambiarCantidad, eliminarCarrito } from '../../actions/carritoAction';
+import { deleteIcon } from '../../helpers/images';
 
 const ProdCarrito = ({producto}) => {
 
@@ -42,6 +43,9 @@ const ProdCarrito = ({producto}) => {
             <p>Total:</p>
             <span>{'$'}{totalProd}</span>
         </div>
+        <button className='btn-eliminarCart' onClick={()=>dispatch(eliminarCarrito(id))}>
+            <img src={deleteIcon} alt='borrar icon'/>
+        </button>
     </div>
   )
 }
