@@ -1,0 +1,169 @@
+@import '../base/variables';
+
+.det-producto{
+    @include d-flex(column,flex-start,center);
+    margin-bottom: 20px;
+    .cntr-producto{
+        width: 100%;
+        @include d-flex(row, flex-start,center);
+        >div{
+            @include d-flex(row,flex-start,flex-start);
+            min-width: 50%;
+            padding: 10px;
+        }
+        div.cntr-imagenes{
+            >div{
+                @include d-flex(column,center,flex-start);
+                padding: 5px;
+            }
+            img{
+                object-fit: cover;
+                width: 100%;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            >div:first-child{
+                button{
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 5px;
+                    border: none;
+                    background: none;
+                    border-radius: 3px;
+                    -webkit-box-shadow: 0px 0px 3px 0px #000000; 
+                    box-shadow: 0px 0px 3px 0px #000000;
+                    img{
+                        border-radius: 3px;
+                    }
+                }
+            }
+            >div:nth-child(2){
+                flex-grow: 1;
+                img{
+                    max-width: 500px;
+                    max-height: 600px;
+                }
+            }
+        }
+        div.cntr-info{
+            >div:first-child{
+                @include d-flex(column, flex-start, flex-start);
+                flex-grow: 1;
+                >div{
+                    @include d-flex(column, flex-start, flex-start);
+                    width: 100%;
+                    padding-top: 10px;
+                    margin-bottom: 20px;
+                    border-top: solid 0.5px $beige;
+                    &:first-child{
+                        border:none;
+                    }
+                    h2{
+                        padding-bottom: 10px;
+                        font-size: 22px;
+                        font-weight: 700;
+                        &~p{
+                            color: $green;
+                            font-weight: 600;
+                        }
+                    }
+                    .acerca{
+                        font-size: 16px;
+                        font-weight:700;
+                        padding-bottom: 10px;
+                    }
+                    p{
+                        margin: 5px 0;
+                    }
+                }
+            }
+            >div:nth-child(2){
+                margin: 0 10px;
+                padding: 5px;
+                min-width: 180px;
+                max-width: 200px;
+                outline: solid 0.5px $grey;
+                border-radius: 3px;
+                @include d-flex(column, flex-start, flex-start);
+                span, p{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                button{
+                    border: 1px solid $yellow;
+                    padding: 7px;
+                    margin: 5px 0;
+                    width: 100%;
+                    background-color: $light-yellow;
+                    border-radius: 5px;
+                    color: $blue;
+                    &:hover{
+                        background-color: $yellow;
+                        &~button{
+                            background-color: $light-yellow;
+                        }
+                    }
+                    &~button{
+                        background-color: $yellow;
+                        &:hover{
+                            background-color: $green;
+                            color: $white;
+                            border: none;
+                        }
+                    }
+                }
+            }
+            span{
+                font-weight: 700;
+                &.precio{
+                    color: $red;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.cntr-seccion-producto{
+    width: 100%;
+    @include d-flex(column,flex-start,flex-start);
+    >p{
+        color: $grey;
+        font-size: 13px;
+        margin: 0 10px;
+    }
+}
+
+.cntr-opiniones{
+    @include d-flex(column,flex-start, flex-start);
+    margin: 15px;
+    max-width: 650px;
+    >div{
+        width: 100%;
+        margin-bottom: 15px;
+        @include d-flex;
+        >div{
+            width: 100%;
+            margin-bottom: 10px;
+            @include d-flex(row,center,flex-start);
+            >div{
+                width: 40px;
+                height: 40px;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            h6{
+                color: $dark-blue;
+                margin-left: 10px;
+                font-weight: 550;
+            }
+        }
+        p{
+            font-size: 13px;
+            color: $grey;
+            line-height: 18px;
+        }
+    }
+}

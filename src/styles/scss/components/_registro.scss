@@ -1,0 +1,77 @@
+@import '../base/variables';
+
+.cntr-registro{
+    @include d-flex;
+    width: 100%;
+    max-width: 410px;
+    margin: 40px 0;
+    button{
+        max-width: 250px;
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 8px;
+        border-radius: 8px;
+    }
+    form{
+        @include d-flex;
+        width: 100%;
+        padding: 10px 0;
+        margin: 30px 0;
+        border-bottom: solid 1px $grey;
+        >div{
+            width: 100%;
+            margin: 10px 0;
+            @include d-flex;
+            label, input{
+                width: 100%;
+                text-align: left;
+            }
+            label{
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            input{
+                padding: 8px;
+                border-radius: 8px;
+            }
+        }
+        button{
+            background-color: $light-yellow;
+            border: 1px solid $yellow;
+            color: $blue;
+            &:hover{
+                background-color: $yellow;
+            }
+        }
+    }
+    .btn-google{
+        background-color: $red;
+        border: 1px solid $red;
+        color: $white;
+        opacity: 80%;
+        &:hover{
+            opacity: 100%;
+        }
+    }
+    .btn-fb{
+        background-color: $blue;
+        border: 1px solid $blue;
+        color: $white;
+        &:hover{
+            background-color: $dark-blue;
+        }
+    }
+    >p{
+        font-size: 16px;
+        margin: 10px 0;
+        color: $blue;
+    }
+    >a{
+        font-size: 16px;
+        color: $green;
+        &:hover{
+            font-weight: 600;
+        }
+    }
+}

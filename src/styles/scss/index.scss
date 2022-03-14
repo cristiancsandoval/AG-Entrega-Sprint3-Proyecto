@@ -1,0 +1,11 @@
+/*Documento general de estilos */
+@use './base/general';
+@use './components/header';
+@use './components/home';
+@use './components/producto';
+@use './components/footer';
+@use './components/carrito';
+@use './components/registro';
+@use './components/admin';
+//Compilación
+//sass --watch src/styles/scss/index.scss src/styles/css/index.css

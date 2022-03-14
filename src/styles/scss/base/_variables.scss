@@ -1,0 +1,46 @@
+//Variables
+
+//Variables de fuentes
+$fuente-titulo: 'Poppins', sans-serif;
+$fuente: 'Roboto', sans-serif;
+
+//Variables de colores
+$white: white;
+$beige: #FAFAFA;
+$dark-blue: #131921;
+$blue: #242F3E;
+$black: black;
+$grey: #565959;
+$yellow: #F0AD64;
+$light-yellow: #F3D184;
+$green: #0E7184;
+$red: #AF2913;
+
+//Disposición de elementos
+@mixin d-flex($direction:column, $align:center, $justify:center){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+};
+
+//Configuración título
+%titulo-main{
+    color: $black;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+//boton general
+%boton-simple{
+    margin: 0px 10px;
+    padding: 7px 10px;
+    background-color: $light-yellow;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+    color: $blue;
+    &:hover{
+        background-color: $yellow;
+    }
+}

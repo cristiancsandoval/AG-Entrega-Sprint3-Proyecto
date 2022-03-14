@@ -1,0 +1,66 @@
+//Importaciones
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+//Reseteo de estilos
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Configuración general de fuentes
+h1{
+    font-family: $fuente-titulo;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+p, h2, h3, h4, h5, h6, button, input, label, a, li, span{
+    font-family: $fuente;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#root{
+    width: 100%;
+    min-height: 100vh;
+    @include d-flex(column,center,space-between)
+}
+
+.cntr-main{
+    width: 100%;
+}
+
+.d-none{
+    display: none;
+}
+
+.titulo-home{
+    @include d-flex(row,center,flex-start);
+    padding: 10px;
+    h3{
+        @extend %titulo-main;
+        margin: 0;
+        margin-right: 10px;
+    }
+    h4{
+        color: $grey;
+    }
+}
+
+.subtitulo{
+    color: $black;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: solid 2px $beige;
+}
+
+.link{
+    cursor: pointer;
+}

@@ -1,0 +1,164 @@
+@import '../base/variables';
+
+.cntr-admin{
+    width: 100%;
+    padding: 10px 30px;
+    @include d-flex(column,flex-start, flex-start);
+    h2{ 
+        @extend %titulo-main;
+    }
+    >div{
+        width: 100%;
+        @include d-flex(column,flex-start, flex-start);
+        h3{
+            color: $grey;
+            font-size: 17px;
+            font-weight: 700;
+            margin: 15px 0;
+            width: 100%;
+            text-align: left;
+            border-top: solid 1px $beige;
+        }
+        form{
+            width: 100%;
+            @include d-flex(column,flex-start, flex-start);
+            input{
+                padding: 3px;
+                border-radius: 3px;
+            }
+            >div{
+                @include d-flex(row,center,flex-start);
+                width: 100%;
+                flex-wrap:wrap;
+                margin: 20px 0;
+                padding-top: 10px;
+                border-top: 1px solid $grey;
+                label{
+                    margin-right: 5px;
+                }
+                >div{
+                    @include d-flex(row,center,flex-start);
+                    width: 100%;
+                    max-width: 400px;
+                    margin: 5px;
+                    input{
+                        flex-grow: 1;
+                    }
+                }
+            }
+            .caracteristicas{
+                input{
+                    max-width: 500px;
+                    flex-grow: 1;
+                }
+                button{
+                    @extend %boton-simple;
+                }
+                ul{
+                    flex-grow: 2;
+                    width: 100%;
+                    padding: 5px 20px;
+                }
+            }
+            .fotos{
+                button{
+                    @extend %boton-simple;
+                }
+                >div{
+                    flex-grow: 1;
+                    @include d-flex(row,center,flex-start);
+                    img{
+                        margin: 0 10px;
+                        max-width: 100px;
+                    }
+                }
+            }
+            .opiniones{
+                h5{
+                    width: 100%;
+                    text-align: left;
+                    margin: 5px;
+                }
+                button{
+                    @extend %boton-simple;
+                }
+                .cntr-opiniones{
+                    min-width: 100%;
+                    flex-grow: 1;
+                    @include d-flex(row,center,flex-start);
+                    >div{
+                        max-width: 500px;
+                        @include d-flex(column,left,flex-start);
+                        margin: 10px;
+                        padding: 10px;
+                        border: 1px solid $light-yellow;
+                        border-radius: 5px;
+                        img{
+                            max-width: 50px;
+                        }
+                        h6{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .btn-submit{
+                margin: 0px 10px;
+                padding: 15px;
+                border: none;
+                background-color: $blue;
+                border-radius: 5px;
+                color: $white;
+                &:hover{
+                    background-color: $dark-blue;
+                }
+            }
+        }
+        >div{
+            @include d-flex;
+            width: 100%;
+            >div{
+                @include d-flex(row,center,center);
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                border: solid 2px $beige;
+                &:hover{
+                    -webkit-box-shadow: 0px 0px 10px -4px $grey; 
+                    box-shadow: 0px 0px 10px -4px $grey;
+                    background-color: $beige;
+                }
+                >div{
+                    width: 40px;
+                    height: 40px;
+                    img{
+                        object-fit: cover;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+                h6{
+                    flex-grow: 1;
+                    margin: 0 10px;
+                    font-size: 16px;
+                }
+                button{
+                    width: 25px;
+                    height: 25px;
+                    margin:5px;
+                    border: none;
+                    background-color: $light-yellow;
+                    border-radius: 8px;
+                    &:hover{
+                        background-color: $red;
+                    }
+                    img{
+                        width: 100%;
+                        padding:5px;
+                    }
+                }
+            }
+        }
+    }
+}

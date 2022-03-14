@@ -1,0 +1,133 @@
+@import '../base/variables';
+
+header{
+    width: 100%;
+    @include d-flex;
+    nav{
+        width: 100%;
+        padding: 10px 15px;
+        @include d-flex(row,center,center);
+        background-color: $dark-blue;
+        color: $white;
+        >div{
+            @include d-flex(column,flex-start,space-around);
+            padding: 0 10px;
+            >div{
+                @include d-flex(row,center,center);
+            }
+            &:first-child{
+                @include d-flex(column,center,space-around);
+            }
+        }
+        .search-bar{
+            flex-grow: 1;
+            form{
+                @include d-flex(row,center,center);
+                width: 100%;
+                height: 40px;
+                select, >div, button{
+                    height: 100%;
+                    border: none;
+                }
+                select{
+                    border-radius: 8px 0 0 8px;
+                    padding: 5px;
+                    color: $grey;
+                    background-color:$beige;
+                    &:focus{
+                        border: none;
+                        outline: none;
+                    }
+                }
+                >div{
+                    flex-grow: 1;
+                    @include d-flex;
+                    position: relative;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        padding: 5px;
+                        border: none;
+                        outline: none;
+                        &:focus{
+                            border: solid $grey 2px;
+                            border-bottom: none;
+                            border-radius: 5px 5px 0 0;
+                            outline: none;
+                            &~ul{
+                                display: block;
+                            }
+                        }
+                    }
+                    ul{
+                        width: 100%;
+                        position: absolute;
+                        top: 100%;
+                        z-index: 10;
+                        border: solid $grey 2px;
+                        border-top: none;
+                        border-radius: 0 0 5px 5px;
+                        background-color: $white;
+                        display: none;
+                        li{
+                            width: 100%;
+                            text-decoration: none;
+                            list-style: none;
+                            padding: 3px;
+                            margin: 3px 0;
+                            font-size: 13px;
+                            color: $grey;
+                            &:hover{
+                                background-color: $beige;
+                            }
+                            a{
+                                width: 100%;
+                                color: $grey;
+                                &:hover{
+                                    color: $green;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                        &:hover{
+                            display: block;
+                        }
+                    }
+                }
+                button{
+                    width: 40px;
+                    border-radius: 0 8px 8px 0;
+                    @include d-flex;
+                    background-color: $yellow;
+                }
+            }
+        }
+        .hdr-identificacion{
+            a{
+                color: $yellow;
+                text-decoration: none;
+                &:hover{
+                    color: $light-yellow;
+                }
+            }
+            p:hover{
+                color: $red;
+                cursor: pointer;
+            }
+        }
+    }
+    >div{
+        width: 100%;
+        padding: 10px;
+        @include d-flex(row, center, flex-start);
+        background-color: $blue;
+        a{
+            color: $white;
+            margin-right: 15px;
+            text-transform: capitalize;
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+}
