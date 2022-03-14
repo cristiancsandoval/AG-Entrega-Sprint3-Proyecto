@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# ✨Amazonas App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación clon de Amazon desarrollada por medio de React JS ⚛.
 
-## Available Scripts
+## 🖥 Deploy
 
-In the project directory, you can run:
+Este proyecto fue despleguedado por medio de Firebase. [Click aquí para visitar el sitio 🚀](https://as-app-2d11a.web.app/)
 
-### `npm start`
+## 📚 Secciones y funcionalidades del proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El proyecto cuenta con las siguientes secciones:
+ - **Página principal** en la cual se pueden consultar todos los artículos disponibles, filtrarlos según departamento y/o categoría y agregarlos al carrito. 
+ - **Barra de navegación** en el header en la cuál se puede permitir el acceso a la ubicación, realizar la búsqueda de un producto en la barra de búsqueda, iniciar y cerrar sesión del usuario y acceder al carrito de compras.
+ - **Sección de Login y Sign Up** por medio de la cuál el usuario puede iniciar sesión o crear una nueva cuenta usando correo y contraseña, cuenta de Google o cuenta de Facebook como medios de autenticación.
+ - **Detalle de un producto** en la cuál se pueden consultar a detalle las características de un producto seleccionado y ver a detalle sus fotos. En esta misma sección, el usuario puede agregar el producto al carrito o si lo desea comprar empezar directamente la compra. Además, en esta sección se pueden consultar productos relacionados y reseñasen relación al producto.
+ - **Carrito** de compras, en la cúal se pueden consultar los productos previamente agregados, cambiar su cantidad y calcular el precio total del pedido.
+ 
+ Adicionalmente, se creó una sección de uso restringido:
+ - **Panel de administración** en la cuál los usuarios catalogados como administradores pueden agregar nuevos productos y modificar los productos existentes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙ Especificaciones técnicas
 
-### `npm test`
+Dentro de los recursos técnicos utilizados para el desarrollo se encuentran:
+- Autentificación de usuarios por medio de Firebase Authentication con correo y contraseña, cuenta de Google y cuenta de Facebook.
+- En base a la autentificación del usuario, se ejecuta un sistema de protección de rutas por medio de _React-router-dom_. Dentro de las rutas públicas se encuentran la página principal y el detalle del productos. Dentro de las rutas públicas limitadas están la sección de Login y Sign Up (solo se accede a ellas en caso de que el usuario no esté autenticado). Dentro de las rutas privadas, se encuentran el carrito de compras y el panel de administración, el cual está protegido de manera adicional con una autenticación de administrador.
+- Uso de _componentes en función_ de React y de _hooks_ tales como _useState_, _useEffect_, _useParams_ y _useNavigate_ para el manejo de estados e intercambio de información entre componentes dentro de la aplicación. Así mismo para funcionalidades de búsqueda, filtrado y condiciones de carga del sitio.
+- Uso de almacenamiento externo (_backend_) por medio de una base de datos en Firebase. En esta base de datos se almacena la información de los productos y se accede a ella por medio de peticiones asíncronas en caso de modificación de información o sincronización de la información con el _almacenamiento local_.
+- Uso de almacenamiento local centralizado por medio de _Redux_. Se tienen tres estados dentro de la apliación: usuario, productos y carrito. La información de usuario se maneja en relación con el estado de la autentificiación, la información de productos es sincronizada con el almacenamiento de Firebase y el estado del carrito se sincroniza en relación con la interacción del usuario. Dentro de cada uno de los estados existen diferentes acciones, generamente relacionadas con procesos CRUD. Gracias al almacenamiento local con Redux, la aplicación funciona de manera más fluida y rápida y se limitan las peticiones al backend.
+- El desarrollo de los estilos del sitio se implementó por medio de _SASS_ utilizando funcionalidades como _mixins_, _partials_, _nesting_ y _extends_, lo cual permitió optimizar el código de estilos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🙋‍♂️ Autoría del proyecto
 
-### `npm run build`
+✍ Sitio desarrollado en su totalidad por [Cristian Camilo Sandoval Linares](https://github.com/cristiancsandoval)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🏙 Proyecto realizado como parte de la formación como Desarollador Frontend React JS en **Academia Geek**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 👋 Gracias por visitar este repositorio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Click aquí para visitar más proyectos 🚀](https://github.com/cristiancsandoval?tab=repositories)
